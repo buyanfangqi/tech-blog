@@ -1,6 +1,6 @@
 """
-Git 自动提交脚本（Python版本）
-用于将生成的博客自动提交到 GitHub 仓库
+Git 自动提交脚本（Gitee 版本）
+用于将生成的博客自动提交到 Gitee 仓库
 """
 
 import os
@@ -10,7 +10,8 @@ from datetime import datetime
 
 # 配置
 BLOG_DIR = Path(r"C:\Users\zx\openclaw\.openclaw\workspace\tech-blog")
-GITHUB_REPO = "buyanfangqi/tech-blog"  # 请修改为你的 GitHub 用户名和仓库名
+GITEE_REPO = "buyanfangqi/tech-blog"  # 请修改为你的 Gitee 用户名和仓库名
+GITEE_TOKEN = ""  # 可选：Gitee Personal Access Token（用于 HTTPS 推送）
 
 def run_command(command: list, cwd: Path = None) -> tuple:
     """运行 shell 命令"""
@@ -105,16 +106,16 @@ def commit_and_push():
         print(f"Git commit 失败: {output}")
         return False
 
-    # 推送到 GitHub
-    print("推送到 GitHub...")
+    # 推送到 Gitee
+    print("推送到 Gitee...")
     success, output = run_command(["git", "push"], cwd=BLOG_DIR)
 
     if not success:
         print(f"Git push 失败: {output}")
-        print("请确保已配置 GitHub 远程仓库并设置好认证")
+        print("请确保已配置 Gitee 远程仓库并设置好认证")
         return False
 
-    print("✅ 博客已成功推送到 GitHub")
+    print("✅ 博客已成功推送到 Gitee")
     return True
 
 def setup_gitee_remote():
@@ -151,13 +152,13 @@ if __name__ == "__main__":
         exit(1)
 
     # 设置远程仓库（需要修改配置）
-    if "your-username" in GITHUB_REPO:
-        print("\n⚠️  请先修改配置文件中的 GITHUB_REPO 变量")
-        print("   GITHUB_REPO = \"your-username/tech-blog\"")
-        print("   改为: GITHUB_REPO = \"你的GitHub用户名/tech-blog\"")
+    if "your-gitee-username" in GITEE_REPO:
+        print("\n⚠️  请先修改配置文件中的 GITEE_REPO 变量")
+        print("   GITEE_REPO = \"your-gitee-username/tech-blog\"")
+        print("   改为: GITEE_REPO = \"你的Gitee用户名/tech-blog\"")
         exit(1)
 
-    setup_github_remote()
+    setup_gitee_remote()
 
     # 提交并推送
     commit_and_push()
