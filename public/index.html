@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+	<meta name="generator" content="Hugo 0.158.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }}</title>
+    <title>AI 技术博客</title>
     <link rel="stylesheet" href="/css/style.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -141,24 +142,69 @@
 <body>
     <header>
         <div class="container">
-            <h1>{{ .Site.Title }}</h1>
-            <p>{{ .Site.Params.description }}</p>
+            <h1>AI 技术博客</h1>
+            <p>AI Infra、Agent、大模型算法技术博客</p>
         </div>
     </header>
 
     <nav>
         <div class="container">
             <ul>
-                {{ range .Site.Menus.main }}
-                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-                {{ end }}
+                
+                <li><a href="/">首页</a></li>
+                
+                <li><a href="/ai-infra/">AI Infra</a></li>
+                
+                <li><a href="/agent/">Agent</a></li>
+                
+                <li><a href="/llm/">大模型</a></li>
+                
             </ul>
         </div>
     </nav>
 
     <main class="container">
-        {{ block "main" . }}
-        {{ end }}
+        
+<div class="posts-grid">
+    
+    <article class="post-card">
+        <span class="category-badge category-">
+            
+        </span>
+        <h2><a href="/agent/">Agent 技术总结</a></h2>
+        <div class="post-meta">
+            <time>2024-01-01</time>
+            
+        </div>
+        <p class="post-summary"><p>欢迎来到 Agent 技术分类。这里收录了 AI Agent 相关的技术文章。</p></p>
+    </article>
+    
+    <article class="post-card">
+        <span class="category-badge category-">
+            
+        </span>
+        <h2><a href="/ai-infra/">AI Infra 技术总结</a></h2>
+        <div class="post-meta">
+            <time>2024-01-01</time>
+            
+        </div>
+        <p class="post-summary"><p>欢迎来到 AI Infra 技术分类。这里收录了人工智能基础设施相关的技术文章。</p></p>
+    </article>
+    
+    <article class="post-card">
+        <span class="category-badge category-">
+            
+        </span>
+        <h2><a href="/llm/">大模型算法技术</a></h2>
+        <div class="post-meta">
+            <time>2024-01-01</time>
+            
+        </div>
+        <p class="post-summary"><p>欢迎来到大模型算法技术分类。这里收录了大规模语言模型相关的技术文章。</p></p>
+    </article>
+    
+</div>
+
     </main>
 
     <footer style="text-align: center; padding: 2rem; color: #666;">

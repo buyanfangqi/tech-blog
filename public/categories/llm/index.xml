@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LLM on AI 技术博客</title>
+    <link>/categories/llm/</link>
+    <description>Recent content in LLM on AI 技术博客</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/categories/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>大模型算法技术</title>
+      <link>/llm/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>/llm/</guid>
+      <description>&lt;p&gt;欢迎来到大模型算法技术分类。这里收录了大规模语言模型相关的技术文章。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

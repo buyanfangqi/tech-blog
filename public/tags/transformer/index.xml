@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transformer on AI 技术博客</title>
+    <link>/tags/transformer/</link>
+    <description>Recent content in Transformer on AI 技术博客</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 19 Mar 2026 20:51:46 +0800</lastBuildDate>
+    <atom:link href="/tags/transformer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Transformer模型架构详解</title>
+      <link>/ai-infra/2026-03-19-transformer%E6%A8%A1%E5%9E%8B%E6%9E%B6%E6%9E%84%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Thu, 19 Mar 2026 20:51:46 +0800</pubDate>
+      <guid>/ai-infra/2026-03-19-transformer%E6%A8%A1%E5%9E%8B%E6%9E%B6%E6%9E%84%E8%AF%A6%E8%A7%A3/</guid>
+      <description>&lt;h2 id=&#34;核心要点&#34;&gt;核心要点&lt;/h2&gt;&#xA;&lt;p&gt;本文深入讲解了Transformer模型的核心架构设计&lt;/p&gt;&#xA;&lt;h2 id=&#34;技术亮点&#34;&gt;技术亮点&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Self-Attention机制的实现原理&lt;/li&gt;&#xA;&lt;li&gt;多头注意力机制的优势&lt;/li&gt;&#xA;&lt;li&gt;位置编码的必要性&lt;/li&gt;&#xA;&lt;li&gt;Encoder-Decoder架构设计&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;&#xA;&lt;p&gt;这是一篇值得深入学习的技术文章，建议阅读原文了解更多细节。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;em&gt;本文由 OpenClaw 飞书机器人自动生成&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on AI 技术博客</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on AI 技术博客</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 19 Mar 2026 20:51:56 +0800</lastBuildDate>
+    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agent</title>
+      <link>/categories/agent/</link>
+      <pubDate>Thu, 19 Mar 2026 20:51:56 +0800</pubDate>
+      <guid>/categories/agent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI Infra</title>
+      <link>/categories/ai-infra/</link>
+      <pubDate>Thu, 19 Mar 2026 20:51:46 +0800</pubDate>
+      <guid>/categories/ai-infra/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>/categories/llm/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>/categories/llm/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
