@@ -1,0 +1,36 @@
+baseURL = "https://buyanfangqi.github.io/tech-blog/"
+languageCode = "zh-CN"
+title = "AI 技术博客"
+theme = "tech-theme"
+
+[params]
+  description = "AI Infra、Agent、大模型算法技术博客"
+  author = "AI Tech Blog"
+
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "AI Infra"
+    url = "/ai-infra/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Agent"
+    url = "/agent/"
+    weight = 3
+
+  [[menu.main]]
+    name = "大模型"
+    url = "/llm/"
+    weight = 4
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

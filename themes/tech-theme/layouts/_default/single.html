@@ -1,0 +1,32 @@
+{{ define "main" }}
+<article class="content">
+    <h1>{{ .Title }}</h1>
+    <div class="post-meta">
+        <time>{{ .Date.Format "2006-01-02" }}</time>
+        {{ with .Params.tags }}
+        <div class="post-tags">
+            {{ range . }}
+            <span>{{ . }}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+
+    <hr style="margin: 2rem 0; border: none; border-top: 1px solid #eee;">
+
+    {{ .Content }}
+
+    {{ with .Params.original_url }}
+    <div class="original-link">
+        <strong>原始文章链接：</strong>
+        <a href="{{ . }}" target="_blank">{{ . }}</a>
+    </div>
+    {{ end }}
+
+    <hr style="margin: 2rem 0; border: none; border-top: 1px solid #eee;">
+
+    <p style="color: #999; font-size: 0.9rem;">
+        <em>本文由 OpenClaw 飞书机器人自动生成</em>
+    </p>
+</article>
+{{ end }}
