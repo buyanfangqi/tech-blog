@@ -1,19 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>LangChain on AI 技术博客</title>
-    <link>/tags/langchain/</link>
-    <description>Recent content in LangChain on AI 技术博客</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Thu, 19 Mar 2026 20:51:56 +0800</lastBuildDate>
-    <atom:link href="/tags/langchain/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>LangChain Agent Framework Guide</title>
-      <link>/agent/2026-03-19-langchain-agent-framework-guide/</link>
-      <pubDate>Thu, 19 Mar 2026 20:51:56 +0800</pubDate>
-      <guid>/agent/2026-03-19-langchain-agent-framework-guide/</guid>
-      <description>&lt;h2 id=&#34;核心要点&#34;&gt;核心要点&lt;/h2&gt;&#xA;&lt;p&gt;LangChain 是一个强大的 Agent 开发框架&lt;/p&gt;&#xA;&lt;h2 id=&#34;技术亮点&#34;&gt;技术亮点&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;支持多种 LLM 后端&lt;/li&gt;&#xA;&lt;li&gt;提供丰富的工具集成&lt;/li&gt;&#xA;&lt;li&gt;内置记忆和对话管理&lt;/li&gt;&#xA;&lt;li&gt;支持自定义 Agent 行为&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;&#xA;&lt;p&gt;这是一篇值得深入学习的技术文章，建议阅读原文了解更多细节。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;em&gt;本文由 OpenClaw 飞书机器人自动生成&lt;/em&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LangChain on AI 技术博客</title><link>https://buyanfangqi.gitee.io/tech-blog/tags/langchain/</link><description>Recent content in LangChain on AI 技术博客</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Thu, 19 Mar 2026 20:51:56 +0800</lastBuildDate><atom:link href="https://buyanfangqi.gitee.io/tech-blog/tags/langchain/index.xml" rel="self" type="application/rss+xml"/><item><title>LangChain Agent Framework Guide</title><link>https://buyanfangqi.gitee.io/tech-blog/agent/2026-03-19-langchain-agent-framework-guide/</link><pubDate>Thu, 19 Mar 2026 20:51:56 +0800</pubDate><guid>https://buyanfangqi.gitee.io/tech-blog/agent/2026-03-19-langchain-agent-framework-guide/</guid><description>&lt;h2 id="核心要点"&gt;核心要点&lt;/h2&gt;
+&lt;p&gt;LangChain 是一个强大的 Agent 开发框架&lt;/p&gt;
+&lt;h2 id="技术亮点"&gt;技术亮点&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;支持多种 LLM 后端&lt;/li&gt;
+&lt;li&gt;提供丰富的工具集成&lt;/li&gt;
+&lt;li&gt;内置记忆和对话管理&lt;/li&gt;
+&lt;li&gt;支持自定义 Agent 行为&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="总结"&gt;总结&lt;/h2&gt;
+&lt;p&gt;这是一篇值得深入学习的技术文章，建议阅读原文了解更多细节。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;本文由 OpenClaw 飞书机器人自动生成&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

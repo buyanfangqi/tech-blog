@@ -1,215 +1,24 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Infra 技术总结</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        nav {
-            background: white;
-            padding: 1rem 0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #667eea;
-        }
-        .posts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 1.5rem;
-        }
-        .post-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .post-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .post-card h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #667eea;
-        }
-        .post-meta {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        .post-summary {
-            color: #555;
-            margin-bottom: 1rem;
-        }
-        .post-tags span {
-            background: #f0f0f0;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-        }
-        .category-badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-bottom: 0.5rem;
-        }
-        .category-ai-infra {
-            background: #e3f2fd;
-            color: #1976d2;
-        }
-        .category-agent {
-            background: #f3e5f5;
-            color: #7b1fa2;
-        }
-        .category-llm {
-            background: #e8f5e9;
-            color: #388e3c;
-        }
-        .content {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        .content h2 {
-            color: #667eea;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        .content p {
-            margin-bottom: 1rem;
-        }
-        .content ul, .content ol {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-        }
-        .original-link {
-            background: #f0f0f0;
-            padding: 1rem;
-            border-radius: 4px;
-            margin-top: 2rem;
-        }
-        .original-link a {
-            color: #667eea;
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>AI 技术博客</h1>
-            <p>AI Infra、Agent、大模型算法技术博客</p>
-        </div>
-    </header>
-
-    <nav>
-        <div class="container">
-            <ul>
-                
-                <li><a href="/">首页</a></li>
-                
-                <li><a href="/ai-infra/">AI Infra</a></li>
-                
-                <li><a href="/agent/">Agent</a></li>
-                
-                <li><a href="/llm/">大模型</a></li>
-                
-            </ul>
-        </div>
-    </nav>
-
-    <main class="container">
-        
-<h1>AI Infra 技术总结</h1>
-<div class="section-description">
-  <p>欢迎来到 AI Infra 技术分类。这里收录了人工智能基础设施相关的技术文章。</p>
-
-</div>
-<hr style="margin: 2rem 0; border: none; border-top: 1px solid #eee;">
-<div class="posts-grid">
-  
-  <article class="post-card">
-    
-    <h2><a href="/ai-infra/2026-03-19-transformer%E6%A8%A1%E5%9E%8B%E6%9E%B6%E6%9E%84%E8%AF%A6%E8%A7%A3/">Transformer模型架构详解</a></h2>
-    <div class="post-meta">
-      <time>2026-03-19</time>
-      
-      <div class="post-tags">
-        
-        <span>Transformer</span>
-        
-        <span>Attention</span>
-        
-        <span>LLM</span>
-        
-      </div>
-      
-    </div>
-    <p class="post-summary"><h2 id="核心要点">核心要点</h2>
-<p>本文深入讲解了Transformer模型的核心架构设计</p>
-<h2 id="技术亮点">技术亮点</h2>
-<ol>
-<li>Self-Attention机制的实现原理</li>
-<li>多头注意力机制的优势</li>
-<li>位置编码的必要性</li>
-<li>Encoder-Decoder架构设计</li>
-</ol>
-<h2 id="总结">总结</h2>
-<p>这是一篇值得深入学习的技术文章，建议阅读原文了解更多细节。</p>
-<hr>
-<p><em>本文由 OpenClaw 飞书机器人自动生成</em></p></p>
-  </article>
-  
-</div>
-
-    </main>
-
-    <footer style="text-align: center; padding: 2rem; color: #666;">
-        <p>由 OpenClaw 飞书机器人自动生成 | Powered by Hugo</p>
-    </footer>
-</body>
-</html>
+<!doctype html><html lang=zh-CN><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>AI Infra 技术总结</title><link rel=stylesheet href=/css/style.css><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;line-height:1.6;color:#333;background:#f5f5f5}.container{max-width:1200px;margin:0 auto;padding:20px}header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:2rem 0;margin-bottom:2rem;box-shadow:0 2px 10px rgba(0,0,0,.1)}header h1{font-size:2.5rem;margin-bottom:.5rem}nav{background:#fff;padding:1rem 0;box-shadow:0 1px 3px rgba(0,0,0,.1);position:sticky;top:0;z-index:100}nav ul{list-style:none;display:flex;justify-content:center;gap:2rem}nav a{text-decoration:none;color:#333;font-weight:500;transition:color .3s}nav a:hover{color:#667eea}.posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:1.5rem}.post-card{background:#fff;border-radius:8px;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.1);transition:transform .3s,box-shadow .3s}.post-card:hover{transform:translateY(-5px);box-shadow:0 5px 15px rgba(0,0,0,.1)}.post-card h2{font-size:1.5rem;margin-bottom:.5rem;color:#667eea}.post-meta{color:#666;font-size:.9rem;margin-bottom:1rem}.post-summary{color:#555;margin-top:1rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.post-tags span{background:#f0f0f0;padding:.2rem .5rem;border-radius:4px;font-size:.8rem;margin-right:.5rem}.original-link{margin-bottom:1rem}.original-link a{color:#667eea;text-decoration:none;font-size:.9rem;padding:.3rem .8rem;background:#f0f4ff;border-radius:4px;display:inline-block;transition:background .3s}.original-link a:hover{background:#e0e7ff}.category-badge{display:inline-block;padding:.25rem .75rem;border-radius:20px;font-size:.85rem;margin-bottom:.5rem}.category-ai-infra{background:#e3f2fd;color:#1976d2}.category-agent{background:#f3e5f5;color:#7b1fa2}.category-llm{background:#e8f5e9;color:#388e3c}.content{background:#fff;padding:2rem;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.1)}.content h2{color:#667eea;margin-top:2rem;margin-bottom:1rem}.content p{margin-bottom:1rem}.content ul,.content ol{margin-left:2rem;margin-bottom:1rem}.content .original-link{background:#f0f0f0;padding:1rem;border-radius:4px;margin-top:2rem}.content .original-link a{color:#667eea;text-decoration:none}</style></head><body><header><div class=container><h1>AI 技术博客</h1><p>AI Infra、Agent、大模型算法技术博客</p></div></header><nav><div class=container><ul><li><a href=/tech-blog/>首页</a></li><li><a href=/tech-blog/ai-infra/>AI Infra</a></li><li><a href=/tech-blog/agent/>Agent</a></li><li><a href=/tech-blog/llm/>大模型</a></li></ul></div></nav><main class=container><h1>AI Infra 技术总结</h1><div class=section-description><p>欢迎来到 AI Infra 技术分类。这里收录了人工智能基础设施相关的技术文章。</p></div><hr style="margin:2rem 0;border:none;border-top:1px solid #eee"><div class=posts-grid><article class=post-card><h2><a href=/tech-blog/ai-infra/2026-03-22-docker-containerization-best-practices/>Docker 容器化 AI 应用最佳实践</a></h2><div class=post-meta><time>2026-03-22</time><div class=post-tags><span>Docker</span>
+<span>容器化</span>
+<span>AI Infra</span>
+<span>部署</span>
+<span>最佳实践</span></div></div><p class=post-summary><h2 id=核心要点>核心要点</h2><p>Docker 容器化是现代 AI 应用部署的标准方式。本文总结了在 Docker 中打包 AI 应用、模型服务和数据处理流程的最佳实践，包括镜像优化、多阶段构建、GPU 支持和安全配置。</p><h2 id=技术亮点>技术亮点</h2><h3 id=1-基础镜像选择>1. 基础镜像选择</h3><p><strong>官方镜像 vs 自定义镜像</strong></p><ul><li>优先使用官方基础镜像（如 <code>nvidia/cuda</code>, <code>python:slim</code>）</li><li>选择合适的基础版本（alpine、slim、full）</li><li>考虑镜像大小和依赖完整性的平衡</li><li>定期更新基础镜像以获取安全补丁</li></ul><p><strong>多架构支持</strong></p><ul><li>使用 <code>docker buildx</code> 构建多架构镜像</li><li>支持 AMD64、ARM64 等不同架构</li><li>优化特定架构的性能</li><li>确保跨平台兼容性</li></ul><h3 id=2-多阶段构建优化>2. 多阶段构建优化</h3><p><strong>分离构建和运行环境</strong></p><ul><li>第一阶段：安装构建依赖（编译器、开发工具）</li><li>第二阶段：复制编译结果到轻量运行镜像</li><li>减少最终镜像大小（有时能减少 80%+）</li><li>加快镜像部署和拉取速度</li></ul><p><strong>示例：Python AI 应用</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-dockerfile data-lang=dockerfile><span style=display:flex><span><span style=color:#75715e># 构建阶段</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>FROM</span> <span style=color:#e6db74>python:3.11-slim</span> <span style=color:#66d9ef>as</span> <span style=color:#e6db74>builder</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>WORKDIR</span> <span style=color:#e6db74>/app</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>COPY</span> requirements.txt .<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>RUN</span> pip install --user -r requirements.txt<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#75715e># 运行阶段</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>FROM</span> <span style=color:#e6db74>python:3.11-slim</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>WORKDIR</span> <span style=color:#e6db74>/app</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>COPY</span> --from<span style=color:#f92672>=</span>builder /root/.local /root/.local<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>COPY</span> . .<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>ENV</span> PATH<span style=color:#f92672>=</span>/root/.local/bin:$PATH<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#66d9ef>CMD</span> [<span style=color:#e6db74>&#34;python&#34;</span>, <span style=color:#e6db74>&#34;app.py&#34;</span>]<span style=color:#960050;background-color:#1e0010>
+</span></span></span></code></pre></div><h3 id=3-依赖管理>3. 依赖管理</h3><p><strong>requirements.txt 优化</strong></p></p></article><article class=post-card><h2><a href=/tech-blog/ai-infra/2026-03-22-kubernetes-ai-infrastructure/>Kubernetes AI 基础设施最佳实践</a></h2><div class=post-meta><time>2026-03-22</time><div class=post-tags><span>Kubernetes</span>
+<span>容器编排</span>
+<span>AI Infra</span>
+<span>部署</span>
+<span>资源管理</span></div></div><p class=post-summary><h2 id=核心要点>核心要点</h2><p>Kubernetes 已成为现代 AI 基础设施的标准平台。本文总结了在 Kubernetes 上部署 AI 工作负载的最佳实践，包括资源管理、GPU 调度、模型部署和监控等关键方面。</p><h2 id=技术亮点>技术亮点</h2><h3 id=1-资源管理策略>1. 资源管理策略</h3><p><strong>GPU 调度</strong></p><ul><li>使用 NVIDIA 设备插件管理 GPU 资源</li><li>配置 <code>nvidia.com/gpu</code> 资源请求和限制</li><li>支持 GPU 共享（MIG 和 MPS）</li><li>实现时间切片以提高 GPU 利用率</li></ul><p><strong>CPU 和内存优化</strong></p><ul><li>设置合理的 requests 和 limits</li><li>使用 <code>kubectl top</code> 监控资源使用</li><li>配置 Horizontal Pod Autoscaler 自动扩缩容</li><li>使用 Pod Disruption Budget 保证高可用</li></ul><h3 id=2-模型部署架构>2. 模型部署架构</h3><p><strong>模型服务化</strong></p><ul><li>使用 TensorFlow Serving、Triton Inference Server 等推理服务器</li><li>通过 Istio 实现流量管理和灰度发布</li><li>配置负载均衡器处理推理请求</li><li>实现自动回滚机制</li></ul><p><strong>批量推理和流式推理</strong></p><ul><li>批量推理：提高吞吐量，适合离线处理</li><li>流式推理：降低延迟，适合实时应用</li><li>根据业务场景选择合适的推理模式</li></ul><h3 id=3-存储和数据处理>3. 存储和数据处理</h3><p><strong>持久化存储</strong></p></p></article><article class=post-card><h2><a href=/tech-blog/ai-infra/2026-03-22-transformer%E6%A8%A1%E5%9E%8B%E6%9E%B6%E6%9E%84%E8%AF%A6%E8%A7%A3/>Transformer模型架构详解</a></h2><div class=post-meta><time>2026-03-22</time><div class=post-tags><span>Transformer</span>
+<span>Attention</span>
+<span>LLM</span></div></div><p class=post-summary><h2 id=核心要点>核心要点</h2><p>本文深入讲解了Transformer模型的核心架构设计</p><h2 id=技术亮点>技术亮点</h2><ol><li>Self-Attention机制的实现原理</li><li>多头注意力机制的优势</li><li>位置编码的必要性</li><li>Encoder-Decoder架构设计</li></ol><h2 id=总结>总结</h2><p>这是一篇值得深入学习的技术文章，建议阅读原文了解更多细节。</p><hr><p><em>本文由 OpenClaw 飞书机器人自动生成</em></p></p></article></div></main><footer style=text-align:center;padding:2rem;color:#666><p>由 OpenClaw 飞书机器人自动生成 | Powered by Hugo</p></footer></body></html>
