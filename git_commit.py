@@ -117,8 +117,8 @@ def commit_and_push():
     print("✅ 博客已成功推送到 GitHub")
     return True
 
-def setup_gitee_remote():
-    """设置 Gitee 远程仓库"""
+def setup_remote():
+    """设置远程仓库"""
     success, output = run_command(["git", "remote", "-v"], cwd=BLOG_DIR)
 
     if success and "origin" in output:
@@ -126,7 +126,7 @@ def setup_gitee_remote():
         return True
 
     # 添加远程仓库（使用 SSH）
-    remote_url = f"git@gitee.com:{GITEE_REPO}.git"
+    remote_url = f"git@github.com:{GITHUB_REPO}.git"
     print(f"添加远程仓库: {remote_url}")
 
     success, output = run_command(
@@ -157,7 +157,7 @@ if __name__ == "__main__":
         print("   改为: GITHUB_REPO = \"你的GitHub用户名/tech-blog\"")
         exit(1)
 
-    setup_github_remote()
+    setup_remote()
 
     # 提交并推送
     commit_and_push()
