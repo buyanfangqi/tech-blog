@@ -106,8 +106,7 @@ GitHub Actions 触发
 
 | 文件 | 作用 |
 |------|------|
-| `git_commit.py` | ✅ **GitHub 版本**（当前使用） |
-| `git_commit_gitee.py` | Gitee 版本（备用） |
+| `git_commit.py` | GitHub 版本（自动提交脚本） |
 | `generate_blog.py` | 博客生成脚本 |
 | `config.toml` | Hugo 配置（GitHub） |
 
@@ -125,7 +124,6 @@ GitHub Actions 触发
 | `README.md` | 项目概述 |
 | `QUICKSTART.md` | GitHub 快速开始 |
 | `DEPLOYMENT.md` | 完整部署文档 |
-| `GITEE_DEPLOYMENT.md` | Gitee 部署指南（备用） |
 
 ---
 
