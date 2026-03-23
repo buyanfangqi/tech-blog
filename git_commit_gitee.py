@@ -1,5 +1,5 @@
 """
-Git 自动提交脚本（Gitee 版本）
+Git 自动提交脚本（Gitee + Vercel 部署版本）
 用于将生成的博客自动提交到 Gitee 仓库，Vercel 自动部署
 """
 
@@ -26,51 +26,8 @@ def run_command(command: list, cwd: Path = None) -> tuple:
     except subprocess.CalledProcessError as e:
         return False, e.stderr
 
-def init_git_repo():
-    """初始化 Git 仓库（如果还没有）"""
-    git_dir = BLOG_DIR / ".git"
-
-    if not git_dir.exists():
-        print("初始化 Git 仓库...")
-        success, output = run_command(["git", "init"], cwd=BLOG_DIR)
-
-        if not success:
-            print(f"Git 初始化失败: {output}")
-            return False
-
-        # 创建 .gitignore
-        gitignore = BLOG_DIR / ".gitignore"
-        if not gitignore.exists():
-            with open(gitignore, 'w', encoding='utf-8') as f:
-                f.write("""# Hugo
-/public/
-/resources/_gen/
-.hugo_build.lock
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-.venv/
-venv/
-""")
-
-        # 初始提交
-        run_command(["git", "add", "."], cwd=BLOG_DIR)
-        run_command(["git", "commit", "-m", "Initial commit"], cwd=BLOG_DIR)
-
-        print("Git 仓库初始化完成")
-        return True
-    else:
-        print("Git 仓库已存在")
-        return True
-
 def commit_and_push():
-    """提交并推送更改"""
+    """提交并推送到 Gitee"""
 
     # 检查是否有更改
     success, output = run_command(["git", "status", "--porcelain"], cwd=BLOG_DIR)
@@ -118,47 +75,9 @@ def commit_and_push():
     print("Vercel 将自动检测并部署（约 1-2 分钟）")
     return True
 
-def setup_remote():
-    """设置远程仓库"""
-    success, output = run_command(["git", "remote", "-v"], cwd=BLOG_DIR)
-
-    if success and "origin" in output:
-        print(f"远程仓库已配置: {output}")
-        return True
-
-    # 添加远程仓库（使用 SSH）
-    remote_url = f"git@gitee.com:{GITEE_REPO}.git"
-    print(f"添加远程仓库: {remote_url}")
-
-    success, output = run_command(
-        ["git", "remote", "add", "origin", remote_url],
-        cwd=BLOG_DIR
-    )
-
-    if success:
-        print("✅ 远程仓库配置完成")
-        return True
-    else:
-        print(f"❌ 远程仓库配置失败: {output}")
-        return False
-
 if __name__ == "__main__":
     # 确保目录存在
     BLOG_DIR.mkdir(parents=True, exist_ok=True)
-
-    # 初始化 Git 仓库
-    if not init_git_repo():
-        print("❌ Git 仓库初始化失败")
-        exit(1)
-
-    # 设置远程仓库
-    if "your-username" in GITEE_REPO:
-        print("\n⚠️  请先修改配置文件中的 GITEE_REPO 变量")
-        print("   GITEE_REPO = \"your-username/tech-blog\"")
-        print("   改为: GITEE_REPO = \"你的Gitee用户名/tech-blog\"")
-        exit(1)
-
-    setup_remote()
 
     # 提交并推送
     commit_and_push()

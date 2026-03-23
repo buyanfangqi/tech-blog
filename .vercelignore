@@ -1,0 +1,12 @@
+# Vercel ignore file - 不要部署到 Vercel
+.git
+.gitignore
+.github
+*.md
+!README.md
+__pycache__
+*.pyc
+.venv
+venv/
+.DS_Store
+Thumbs.db
