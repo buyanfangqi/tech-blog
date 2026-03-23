@@ -77,14 +77,13 @@ draft: false
 categories: ["{category.capitalize()}"]
 tags: {json.dumps(tags or [], ensure_ascii=False)}
 original_url: "{original_url}"
+description: "{summary[:150]}"
 ---
 
 """
 
     # 内容
-    content = front_matter + f"""## 核心要点
-
-{summary}
+    content = front_matter + f"""{summary}
 
 ## 技术亮点
 

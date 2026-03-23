@@ -4,26 +4,16 @@
   {{ .Content }}
 </div>
 <hr style="margin: 2rem 0; border: none; border-top: 1px solid #eee;">
-<div class="posts-grid">
+<div class="posts-list">
   {{ range .Pages }}
-  <article class="post-card">
-    {{ with .Params.category }}
-    <span class="category-badge category-{{ . | lower }}">
-      {{ . }}
-    </span>
-    {{ end }}
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    <div class="post-meta">
-      <time>{{ .Date.Format "2006-01-02" }}</time>
-      {{ with .Params.tags }}
-      <div class="post-tags">
-        {{ range . }}
-        <span>{{ . }}</span>
-        {{ end }}
-      </div>
+  <article class="post-item">
+    <div class="post-header">
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ with .Params.original_url }}
+      <a href="{{ . }}" target="_blank" class="original-link-btn">原文链接 ↗</a>
       {{ end }}
     </div>
-    <p class="post-summary">{{ .Summary }}</p>
+    <p class="post-brief">{{ .Summary }}</p>
   </article>
   {{ end }}
 </div>
