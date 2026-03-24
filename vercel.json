@@ -1,0 +1,14 @@
+{
+  "buildCommand": "hugo --minify",
+  "outputDirectory": "public",
+  "installCommand": "npm install -g hugo-extended",
+  "framework": "hugo",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "status": 200
+    }
+  ]
+}
