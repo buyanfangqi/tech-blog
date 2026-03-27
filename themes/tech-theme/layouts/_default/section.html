@@ -1,20 +1,20 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-<div class="section-description">
-  {{ .Content }}
-</div>
-<hr style="margin: 2rem 0; border: none; border-top: 1px solid #eee;">
 <div class="posts-list">
-  {{ range .Pages }}
-  <article class="post-item">
-    <div class="post-header">
-      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-      {{ with .Params.original_url }}
-      <a href="{{ . }}" target="_blank" class="original-link-btn">原文链接 ↗</a>
-      {{ end }}
-    </div>
-    <p class="post-brief">{{ .Summary }}</p>
-  </article>
-  {{ end }}
+    {{ range .Pages }}
+    <article class="post-item">
+        <div class="post-header">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{ with .Params.original_url }}
+            <a href="{{ . }}" target="_blank" class="original-link-btn">原文链接 ↗</a>
+            {{ end }}
+        </div>
+        {{ with .Params.categories }}
+        <span class="category-badge category-{{ index . 0 | lower }}">
+            {{ index . 0 }}
+        </span>
+        {{ end }}
+        <p class="post-brief">{{ .Summary | plainify | htmlUnescape }}</p>
+    </article>
+    {{ end }}
 </div>
 {{ end }}
