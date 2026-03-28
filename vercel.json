@@ -1,8 +1,5 @@
 {
   "buildCommand": "hugo --minify",
   "outputDirectory": "public",
-  "installCommand": "npm install -g hugo-extended",
-  "framework": "hugo",
-  "cleanUrls": false,
-  "trailingSlash": true
+  "framework": "hugo"
 }
