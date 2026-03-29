@@ -4,6 +4,10 @@ title = "AI 技术博客"
 theme = "tech-theme"
 trailingSlash = false
 
+[permalinks]
+  posts = "/:slug/"
+  pages = "/:slug/"
+
 [params]
   description = "AI Infra、Agent、大模型算法技术博客"
   author = "AI Tech Blog"
