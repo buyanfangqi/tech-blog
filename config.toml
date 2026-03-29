@@ -20,17 +20,17 @@ trailingSlash = false
 
   [[menu.main]]
     name = "AI Infra"
-    url = "/ai-infra/"
+    url = "/ai-infra"
     weight = 2
 
   [[menu.main]]
     name = "Agent"
-    url = "/agent/"
+    url = "/agent"
     weight = 3
 
   [[menu.main]]
     name = "大模型"
-    url = "/llm/"
+    url = "/llm"
     weight = 4
 
 [taxonomies]
