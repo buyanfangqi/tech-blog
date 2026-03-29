@@ -1,19 +1,5 @@
 {
   "buildCommand": "hugo --minify",
   "outputDirectory": "public",
-  "installCommand": "curl -L https://github.com/gohugoio/hugo/releases/download/v0.158.0/hugo_extended_0.158.0_linux-amd64.tar.gz | tar -xz && mv hugo /usr/local/bin/ && chmod +x /usr/local/bin/hugo",
-  "framework": null,
-  "env": {
-    "HUGO_ENV": "production"
-  },
-  "routes": [
-    {
-      "src": "/^(.*\\/)$/",
-      "dest": "/$1index.html"
-    },
-    {
-      "src": "/^(.*\\/index)$/",
-      "dest": "/$1index.html"
-    }
-  ]
+  "installCommand": "curl -L https://github.com/gohugoio/hugo/releases/download/v0.158.0/hugo_extended_0.158.0_linux-amd64.tar.gz | tar -xz && mv hugo /usr/local/bin/ && chmod +x /usr/local/bin/hugo"
 }
