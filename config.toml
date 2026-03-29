@@ -2,6 +2,7 @@ baseURL = "https://aiinfraagent.com/"
 languageCode = "zh-CN"
 title = "AI 技术博客"
 theme = "tech-theme"
+trailingSlash = false
 
 [params]
   description = "AI Infra、Agent、大模型算法技术博客"
